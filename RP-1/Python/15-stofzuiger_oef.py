@@ -1,0 +1,1 @@
+# oef bereken de prijs om je appartement te stofzuigen  , vraag de gebruiker het vermogen van de stozuiger en de tijd die hij nodig heeft. Print het resultaat.
