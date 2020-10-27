@@ -1,0 +1,37 @@
+Instellingen voor een nieuwe Raspberry Pi
+
+Nieuwe user aanmaken en de default pi verwijderen:
+
+Open terminal:
+
+1. sudo adduser 'newUserName'
+	add password and other info
+
+2. groups pi : toont lijst met groepen waarin de pi user zit
+
+3. sudo adduser newUserName groupToAdd,groupToAdd2,...
+
+4. sudo visudo
+
+5. Onder #includedir /etc/sudoers.d add
+	newUserName ALL=(ALL) NOPASSWD:ALL
+	(om niet telkens password in te geven bij sudo command)
+
+6. Delete user pi : 
+	userdel pi
+	
+	met error gebruikt door process xxx
+	sudo killall -u pi
+
+	sudo rm -r /home/pi
+	
+
+7. install xrdp for remote desktop
+	sudo apt-get install xrdp
+
+8. install git
+	sudo apt-get install git
+
+9. update and upgrade
+	sudo apt-get update
+	sudo apt-get upgrade
