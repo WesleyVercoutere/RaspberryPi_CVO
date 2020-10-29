@@ -20,3 +20,4 @@ while True:
     toestand_nu = GPIO.input(schakelaar)
     mijnLabel1["text"]=toestand_nu
     window.update()
+    
