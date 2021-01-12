@@ -10,10 +10,7 @@ naar_pin_in3 = 17
 naar_pin_in4 = 26
 
 GPIO.setwarnings(False)
-GPIO.setup(naar_pin_in1, GPIO.OUT)
-GPIO.setup(naar_pin_in2, GPIO.OUT)
-GPIO.setup(naar_pin_in3, GPIO.OUT)
-GPIO.setup(naar_pin_in4, GPIO.OUT)
+*
 
 links= [[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,1,0,0]]
 rechts=[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]
@@ -39,12 +36,12 @@ def draairechts(wacht):
     
 while True:
     for steps in range(509):
-        draairechts(2)
+        draairechts(2) # max 100 pulsen per seconde => wacht moet gelijk zijn aan 10
         
     time.sleep(1)
         
     for steps in range(509):
-        draailinks(2)
+        draailinks(2) # max 100 pulsen per seconde => wacht moet gelijk zijn aan 10
         
     time.sleep(1)    
        
