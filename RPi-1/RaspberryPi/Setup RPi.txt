@@ -56,4 +56,6 @@ sudo dpkg -i filename
 10. set ssh key github
 https://devmarketer.io/learn/set-ssh-key-github/
 
+set fixed ip address 192.168.10.11/24
+
 
