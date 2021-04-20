@@ -44,7 +44,20 @@ Of
 2. sudo passwd weve
 3. reboot -> login weve
 4. sudo killall -u pi
-5. sudo userdel -r pi
+5. sudo userdel -r -f pi
+
+
+sudo nano /etc/lightdm/lightdm.conf
+Replace pi with weve
+
+sudo nano /etc/dhcpcd.conf
+interface eth0
+static ip_address=192.168.10.11/24
+
+
+
+
+
 
 6. sudo apt-get update
 7. sudo apt-get upgrade
@@ -53,9 +66,31 @@ Of
 9. download vs code and install 32 bit arm versie
 sudo dpkg -i filename
 
+sudo apt install code
+
+Install java
+sudo apt install openjdk-11-jdk
+
 10. set ssh key github
 https://devmarketer.io/learn/set-ssh-key-github/
 
 set fixed ip address 192.168.10.11/24
+
+
+sudo apt-get clean
+sudo apt-get autoremove
+
+
+Install pycharm
+
+download pycharm : https://www.jetbrains.com/pycharm/download/other.html
+download patch : youtrack.jetbrains.com/issue/IDEA-237956
+
+extract both files
+
+sudo mv pycharm-community-2020.x.x/ /opt/pycharm
+cd /opt/pycharm/bin
+sudo ./pycharm.sh
+
 
 
