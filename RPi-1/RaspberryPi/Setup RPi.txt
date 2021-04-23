@@ -94,3 +94,14 @@ sudo ./pycharm.sh
 
 
 
+this post applies to the PI 4B
+- without a monitor plugged in VNC would report "Currently can not show desktop"
+- so i followed Dougie's suggestion and edited /boot/config.txt (sudo nano /boot/config.txt)
+(or you can use sudo raspi-config (adv options, resolution)
+hdmi_force_hotplug=1
+hdmi_group=2
+hdmi_mode=82 (this setting is for 1920 x 1080)
+- this produced a VNC window of 1024 x 768 (w/o a monitor plugged in)
+- also had to comment out these two lines in boot/config.txt to get VNC to open at 1920 x 1080 (w/o a monitor plugged in)
+#dtoverlay=vc-fkms-v3d (this setting is related to opengl)
+#max_framebuffers=2
