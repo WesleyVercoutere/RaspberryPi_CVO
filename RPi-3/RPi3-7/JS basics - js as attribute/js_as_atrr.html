@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="h2-1">What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px"><br>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button><br>
+
+<button onclick="document.getElementById('h2-1').style.fontSize='40px';">Increase the size of the text in h2</button><br>
+<button onclick="document.getElementById('myImage').style.display='none'">Hide the light</button>
+<!-- andere manier om iets niet te tonen die de andere elmenten laat staan :-) -->
+<button onclick="document.getElementById('myImage').style.visibility='hidden'">Hide the light</button>
+
+<script>
+
+    // try to get the onclick out of the html element
+</script>
+
+</body>
+</html>
