@@ -1,0 +1,12 @@
+install using  
+pi@raspberrypiWim:~ $ sudo apt install mosquitto mosquitto-clients
+
+Enable the broker and allow it to auto-start after reboot using the following command:-pi@raspberrypiWim:~ sudo systemctl enable mosquitto
+The broker should now be running. You can confirm by checking the systemd service status:-
+pi@raspberrypiWim:~ sudo systemctl status mosquitto
+
+Subscribe met :
+pi@raspberrypiWim:~ $ mosquitto_sub -h localhost -t "rp/msg_from_esp"
+
+Publish met:
+pi@raspberrypiWim:~ $ mosquitto_pub -h localhost -t "rp/msg_from_esp" -m "Hello, world"

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>To Do app</title>
+  </head>
+  <body>
+  <h1>Dit is de huidige todolist!</h1>  
+  <div id="todolist"></div>
+ 
+    <script>
+
+        window.addEventListener("load", download_todo_list);
+
+        function download_todo_list(){
+            console.log("document loaded, start downloading de todolist!")
+            const xhr = new XMLHttpRequest();  // create an XMLHttpRequest object
+
+            // The onreadystatechange function is called every time the readyState changes. When readyState is 4 and status is 200, the response is ready:
+            xhr.onreadystatechange = function() {
+
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("todolist").innerHTML = this.responseText;
+                console.log("todolist loaded and pasted into the html page!")
+                }
+
+            };
+
+            // Send a Request
+            // To send a request to a server, you can use the open() and send() methods of the XMLHttpRequest object:
+            xhr.open('GET', 'todolist.txt', true); // open(method, url, async, user, psw)
+            xhr.send();  // Sends the request to the server, Used for GET requests  >> send(string) Used for POST requests
+
+            // opties
+            // getAllResponseHeaders(), setRequestHeader()
+        }
+
+    </script>
+  
+  </body>
+  
+</html>
